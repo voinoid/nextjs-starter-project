@@ -7,7 +7,7 @@ import Link from 'next/link';
 const name = 'Michael Nye';
 export const siteTitle = 'Next.js Sample Website';
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home }: {children: React.ReactNode, home?: boolean}) {
   return (
     <div className={styles.container}>
       <Head>
@@ -32,9 +32,9 @@ export default function Layout({ children, home }) {
               priority
               src="/images/owl.jpg"
               className={utilStyles.borderCircle}
-              height={144}
-              width={144}
-              alt=""
+              height={200}
+              width={200}
+              alt={name}
             />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
           </>
@@ -47,7 +47,7 @@ export default function Layout({ children, home }) {
                 className={utilStyles.borderCircle}
                 height={108}
                 width={108}
-                alt=""
+                alt={name}
               />
             </Link>
             <h2 className={utilStyles.headingLg}>
